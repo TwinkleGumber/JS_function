@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>square of 10 </title>
+</head>
+<style type="text/css">
+
+    div{
+         border: 2px solid #B22222;
+         width:50%;
+         margin-top: auto;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         margin: auto auto;
+         border-radius: 8px;
+    }
+	input{
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+
+	label{
+		margin-top: 4px;
+	}
+    button{
+    	height: 30px;
+		width: 120px;
+		font-size: 19px;
+		border: 2px solid black;
+		border-radius: 5px;
+		margin-bottom: 60px;
+    }
+	input[type="submit"]{
+		background-color: rgb(155,204,170);
+		height: 30px;
+		width: 120px;
+		font-size: 19px;
+		border: 2px solid blue;
+		border-radius: 5px;
+	}
+	input[type="number"]{
+		height: 30px;
+		
+	}
+	
+	
+</style>
+<body>
+
+<div id="container"> 
+<p><b>Click the button to display the square root of 10.</b></p>
+
+<button onclick="Square()">Button</button>
+
+<p id="Sq"></p>
+
+<h2>Get the square of any number</h2>
+<form>
+            <label><b>Enter any number</b></label><br>
+            <input type="number" name="number" id="userInput">
+            
+        </form>
+             <input type="submit" onclick="showInput();"><br>
+             
+             <label><b>Square of user input :</b></label>
+               
+             <p id="display"></p>
+</div>       
+        
+        
+        <script language="JavaScript">
+            
+            function showInput(){
+                var x = document.getElementById("userInput").value;
+                document.getElementById("display").innerHTML = x*x;
+            };
+         
+        </script>
+
+        <script type="text/javascript">
+        	function Square() {
+                var x = 10 ;
+		        document.getElementById('Sq').innerHTML = Math.pow(10,2);
+		        // or document.getElementById('Sq').innerHTML = x * x;
+	        };
+        </script>
+
+
+</body>
+</html>
